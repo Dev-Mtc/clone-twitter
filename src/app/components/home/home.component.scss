@@ -1,0 +1,190 @@
+@import 'src/styles';
+.container_home{
+    width: 100%;
+    height: 100%;
+    border: 1px solid $border_color;
+    
+    .main{
+        width: 100%;
+        min-width: 200px;
+        max-width: 600px;
+        height: 100%;
+        font-size: 15px;
+        flex-direction: row;
+        border-top: none;
+     
+        .header{
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid $gray_color;
+            padding: 0 16px;
+            height: 54px;
+           
+
+            .title{
+                color: rgb(217, 217, 217);
+                font-size: 1.5em;
+                font-weight: 800;
+            }
+        }
+                     //////////////////////////////// Post message style /////////////////////////////////
+        .input_post_message{
+
+            display: flex;
+            align-items: stretch;
+            width: 100%;
+            border-bottom: 1px solid $gray_color;
+    
+    
+            form{
+                display: flex;
+                width: 100%;
+                div{
+                    margin: 5px;
+                }
+                
+                .user_img{
+    
+                    height: 100%;
+                    width: 50px;
+                    .profil_image img{
+                        border-radius: 50%;  
+                        width: 50px;
+                        height: 50px;
+                            
+                    }
+                }
+                .side_bar{
+                    width: 100%;
+                }
+                textarea{
+                    outline: none;
+                    border: none;
+                    background: none;
+                    color: rgb(217, 217, 217);
+                    width: 100%;
+                    height: auto;
+                    overflow-y: hidden;
+                    resize: none;
+                    font-size: 17px;
+                    padding: 1.25rem;
+                    padding-left: 0%;
+                    padding-right: 0%;
+                    &::placeholder{
+                        color: gray;
+                        font-weight: 700;
+                    }
+                }
+                
+                .bottom_bar{
+                    display: flex;
+                    border-top: 1px solid $gray_color;
+                    align-items: center;
+                    justify-content: space-around;
+                    .option_message{
+                        width: 100%;
+                        height: 100%;
+                      
+                        .btn_option{
+                            display: flex;
+                            color: $primary_color;
+                            gap: 1%;
+                            mat-icon{
+                                
+                                padding: 6px;
+                                cursor: pointer;
+                                &:hover{
+                                    background-color: rgba($color: $primary_color, $alpha: 0.2);
+                                    border-radius: 25px;
+                                }
+                            }
+    
+                        }
+                    }
+                    
+                    .submit_message{
+                        
+                        width: 90px;
+                        height: 40px;
+                        text-align: center;
+                        background-color: $primary_color;
+                        border: none;
+                        outline: none;
+                        border-radius: 9999px;
+                        padding: 6px 4px;
+                        user-select: none;
+                        span{
+                            color: white;
+                            font-weight: 700;
+                        }
+                        &:hover{
+                            cursor: pointer;
+                        }
+                        &:disabled{
+                            cursor: default;
+                            background-color: rgba(29, 161, 242, 0.8);
+                        }
+                    }
+                }
+            }
+            
+            @media screen and (max-width: 500px) {
+                form{
+                    display: none;
+                }
+            }
+            
+        }
+        .content{
+            width: 100%;
+            cursor: pointer;
+
+            .posts__body{     
+                background: none;
+                color:rgb(217, 217, 217);
+                border-bottom: 0.1px solid $gray_color;
+                width: 100%;
+                min-height: 100px;  
+                padding: 12px 4px;
+                display: flex;  
+                &:hover{
+                    background-color: rgba($color: $border_color, $alpha: 0.1);
+                }
+                .user_img{
+                    margin: 5px;
+                    height: 50px;
+                    width: 50px;
+                    
+                    .profil_image img{
+                        border-radius: 50%;    
+                        width: 50px;
+                        height: 50px;
+                        
+                    }
+                }
+                .content_post{
+                    width: 100%;
+                    
+                    .post_author{
+                        display: flex;
+                        p{
+                            text-overflow: ellipsis;
+                            word-wrap: break-word;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }    
+        }
+        
+    }
+
+}
+@media screen and (max-width: 500px){
+    .main{
+        width: 100%;
+        
+        overflow-y: scroll;
+    }
+    
+}

@@ -1,0 +1,70 @@
+<div class="container_home">
+    
+    <div class="main">
+        <div class="header">
+            <div class="title">
+                <span>Accueil</span>
+            </div>
+        </div>
+        <div class="input_post_message">
+            <form [formGroup]="tweetForm" (ngSubmit)="postTweet()">
+                <div class="currentUser_img">
+                    <div class="profil_image">
+                         <!-- <img src="{{currentUser?.avatarUrl || async}}" class="ImgProfil" alt=""> -->
+                    </div>
+                </div>
+                <div class="side_bar">
+                    <div class="input_data">
+                        <textarea cols="30" formControlName="message" rows="1"
+                            placeholder="Quoi de noeuf ?"></textarea>
+                    </div>
+                    <div class="bottom_bar">
+
+                        <div class="option_message">
+                            <div class="btn_option">
+                                <mat-icon class="unselect" aria-label="notifications icon"> image </mat-icon>
+                                <mat-icon class="unselect" aria-label="notifications icon"> gif </mat-icon>
+                                <mat-icon class="unselect" aria-label="notifications icon"> leaderboard </mat-icon>
+                                <mat-icon class="unselect" aria-label="notifications icon"> mood </mat-icon>
+                                <mat-icon class="unselect" aria-label="notifications icon"> event </mat-icon>
+                            </div>
+                        </div>
+                        <div type="submit">
+                            <button type="submit" class="submit_message"
+                                [disabled]="tweetForm.invalid" >
+                                <span>Tweeter</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="content">
+            <div *ngFor="let p of posts" class="posts__body">
+                <div class="user_img">
+                    <div class="profil_image">
+                        <img src="{{ p?.avatarUrl || async }}" class="ImgProfil" alt="">
+                    </div>
+                </div>
+                <div class="content_post">
+                    <div class="post_author">
+                        <p style="font-weight: bold;">{{p?.username || "Default"}}</p>
+                        <p style="color: gray;">@{{p?.tagname || "Default"}}</p>
+                        <p>{{ p?.time?.seconds * 1000 | date:'shortTime' }}</p>
+                    </div>
+                    <div class="post_message">
+                        <p>{{ p?.message }}</p>
+                    </div>
+                    <div class="post_interact">
+                    
+                        <app-interact [postsId]=p?.id [postsNbComment]=p?.nbComment [postsNbRetweet]=p?.nbRetweet
+                            [postsNbLike]=p?.nbLike>
+                        </app-interact>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="poster"></div>
+    </div>
+
+</div>

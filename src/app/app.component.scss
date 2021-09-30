@@ -1,0 +1,327 @@
+@import 'src/styles';
+.main_body{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto 100%;
+
+}
+.navbar_header{
+    grid-column: 1;
+    background-color: black;
+    width: 400px;
+    height: 100%;
+    max-width: 600px;
+    padding-left: 12px;
+    padding-right: 12px;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    user-select: none;
+    position: relative;
+    .navbar{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        .navigation{
+          
+            width: 275px;
+            user-select: none;
+            
+            .links{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .logo{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+               
+                height: 50px;
+                padding: 0 4px;
+                .svg_container{
+                    padding: 12px;
+                    width: 30px;
+                    height: 30px;
+                    .logo_svg{
+                        fill: rgb(217, 217, 217);
+                    }
+                }
+            }
+            a{
+                color: rgb(217, 217, 217);
+                text-decoration: none;
+                
+                font-weight: 700;
+                .select{
+                    padding: 6px;       
+                }
+                .select_link{
+                    display: flex;
+                    width: auto;
+                    padding: 12px;
+                    gap: 30px;  
+                    font-size: 25px;
+                    align-items: center;
+                    justify-content: flex-start;
+                    
+                    mat-icon {
+                        color: rgb(217, 217, 217);
+                        font-size: xx-large;
+                        width: 30px;
+                        height: fit-content;
+                    }
+                    &:hover{
+                        cursor: pointer;
+                        color:$primary_color;
+                        
+                        border-radius: 25px;
+                        background-color: rgb(29, 161, 242, 0.1);
+                        mat-icon {
+                            color: $primary_color;
+                        }
+                        
+                        
+                    }
+                }
+                
+            }
+            .active{
+                color: $primary_color;
+                
+                .select_link mat-icon{
+                    color: $primary_color;
+                }
+                
+            }
+            
+            
+            .btn_tweet{   
+                text-decoration: none;
+                width: 250px;
+                height: 48px;
+                min-height: 48px;
+                font-style: inherit;
+                font-weight: 700;
+                background-color: $primary_color;
+                border: none;
+                border-radius: 9999px;
+                outline: none;
+                cursor: pointer;
+                color: rgb(217, 217, 217);
+                &:hover{
+                    background-color: rgba(29, 161, 242, 0.9);
+                }
+                .tweet_svg{
+                    display: none;
+                   
+                }
+            }
+            
+        }
+       
+        
+        .interfaceUser{
+            position: absolute;
+            top: 75%;
+            width: 300px;
+            height: 150px;
+            padding: 12px 0px;
+            background: black;
+            border-radius: 15px;
+            box-shadow: 2px 2px 5px 1px rgba(255, 255, 255, 0.2),
+                        -2px -2px 5px 1px rgba(255, 255, 255, 0.2);
+            .userInfo{
+               
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                .profil_image img{
+                    border-radius: 50%;    
+                    width: 50px;
+                    height: 50px; 
+    
+                }
+                .username{
+                    font-weight: 700;
+                }
+                .tag_name{
+                    color: gray;
+                }
+            }
+            .user_options{
+                width: 100%;
+                .div_logOut{
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    padding: 16px;
+                    &:hover{
+                        background-color:rgba(255, 255, 255, 0.1);
+                    }
+                }
+            }
+        }
+        .home_header_bottom{
+            display: flex;
+            
+            align-items: center;
+            padding: 6px;
+            margin-bottom: 15px;
+            transition: 0.2ms;
+            .profil_image img{
+                border-radius: 50%;    
+                width: 50px;
+                height: 50px; 
+                
+            }
+            .profil_data{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .profil_user{
+
+                    .username{
+                        font-weight: 700;
+                    }
+                    .tag_name{
+                        color: gray;
+                    }
+                }
+                mat-icon {
+                    color: rgb(217, 217, 217);
+                    font-size: x-large;
+                    width: 30px;
+                    height: fit-content;
+                }
+            }
+            
+            &:hover{
+                cursor: pointer;
+                border-radius: 30px;
+                background-color: rgb(29, 161, 242, 0.1);
+            }
+        }
+       
+    }
+}
+@media screen and (max-width: 1280px){
+    
+    .navbar_header{
+        width: 66px;
+        .navbar{
+            width: auto;
+            .navigation{
+                width: auto;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                a .select_link{
+                    align-content: center;
+                    padding: 4px;
+                    
+                    & span{
+                        display: none;
+                    }
+                    mat-icon {
+                        font-size: 27px;
+                     
+                        
+                    }
+                }
+                
+                .btn_tweet{
+                    width: 48px;
+                    height: 48px;
+                    
+                    & span{
+                        display: none;
+                    }
+                    .tweet_svg{
+                        display: flex;
+                        fill: white;
+                        width: 25px;
+                        height: 25px;
+                    }
+                    
+                }
+            }
+            .home_header_bottom{
+                .profil_data{
+
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    .main_body{
+        flex-direction: column;
+    }
+    .navbar_header{
+        width: 100%;
+        position: fixed;
+        top: calc(100% - 55px);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border-top: 0.1px solid $gray_color;
+        .navbar{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .navigation{
+                height: 150px;
+                width: 100%;
+                display: inline;
+                .logo{
+                    display: none;
+                }
+                .links{
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-around;
+                    .signets{
+                        display: none;
+                    }
+                    .lists{
+                        display: none;
+                    }
+                    .profil{
+                        display: none;
+                    }
+                    .more{
+                        display: none;
+                    }
+                    
+                }
+                
+                .btn_tweet{
+                    position: absolute;
+                    top: -55px;
+                    right: 40px;
+                    width: 48px;
+                    height: 48px;
+                    
+                }
+            }
+            .home_header_bottom{
+                display: none;
+            }         
+        }
+    }
+}
+.router{
+    grid-column: 2;
+
+}

@@ -1,0 +1,56 @@
+.interractor{
+    width: 100%;
+    user-select: none;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-around;
+    color: rgb(217, 217, 217);
+    overflow-x: hidden;
+    .options{
+        width: 100%;
+        display: flex;
+        align-items: center;  
+    }
+    mat-icon{
+        cursor: pointer;
+        font-size: 17px;
+        border-radius: 50px;   
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .comment{
+        padding: 4px;
+        &:hover{
+            color: rgb(3, 70, 133);
+            background-color: rgba(3, 70, 133,0.4);
+        }
+        &:hover~span{
+            color: rgb(3, 70, 133);
+        }
+    }
+    .retweet{
+        padding: 4px;
+        &:hover{
+            color: rgb(26, 153, 26);
+            background-color: rgba(26, 153, 26,0.4);
+        }
+        &:hover ~span{
+            color: rgb(26, 153, 26);
+            
+        }
+    }
+    
+    .like{
+        padding: 4px;
+        &:hover{
+            color: rgb(148, 15, 15);
+            background: rgba(148, 15, 15,0.4);
+        }
+        &:hover ~span{
+            color: rgb(148, 15, 15);
+            
+        }
+    }
+
+}

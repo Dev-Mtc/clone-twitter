@@ -1,0 +1,43 @@
+<div class="interractor">
+
+    <!-- Comment button -->
+    <div class="options">
+        <mat-icon class="unselect comment" aria-label="comment icon">
+            <span class="material-icons-outlined">
+                chat_bubble_outline
+            </span>
+        </mat-icon>
+        <span>{{postsNbComment}}</span>
+    </div>
+
+    <!-- Retweet button  -->
+    <div class="options">
+        <mat-icon class="unselect retweet" aria-label="retweet icon">
+            <span class="material-icons-outlined">
+                sync_alt
+            </span>
+        </mat-icon>
+        <span>{{postsNbRetweet}}</span>
+    </div>
+
+    <!-- Like button -->
+    
+    <div  class="options"  style="color: rgb(148, 15, 15);" *ngIf="(isLiked$ |async) ; else likedTemplate">
+        <mat-icon class="unselect like" aria-label="like icon" (click)="fav()">
+            <span class="material-icons-outlined">
+                favorite
+            </span>
+        </mat-icon>
+        <span>{{postsNbLike || ""}}</span>
+    </div>
+    <ng-template #likedTemplate>
+        <div class="options" >
+            <mat-icon class="unselect like" aria-label="like icon" (click)='fav()'>
+                <span class="material-icons-outlined">
+                    favorite_border
+                </span>
+            </mat-icon>
+            <span>{{postsNbLike}}</span>
+        </div>
+    </ng-template> 
+</div>

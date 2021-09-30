@@ -1,0 +1,130 @@
+@import 'src/styles';
+.container_signin{
+    margin: 0 ;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    .main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 400px;
+        .header_signin{
+            width: 100%;
+           
+            .logo{
+                padding: 12px 16px;
+                .svg_logo{
+                    width: 50px;
+                    height: 50px;
+                    fill: $text_color;
+                }
+                .title{
+                    color: $text_color;
+                    font-size: large;
+                }
+            }
+            .error_field{
+                padding: 12px 16px;
+                color: black;
+                border-radius: 5px;
+                background-color: #FFD2DA;
+            }
+        }
+        form{
+            width: 100%;
+            .input_field{
+                border-radius: 4px;
+                height: auto;
+                padding: 12px 16px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .input_field_email,
+                .input_field_password{
+                    position: relative;
+                    label{
+                        position: absolute;
+                        left: 0.4rem;
+                        top: 1rem;
+                        font-size: 27px;
+                        transition: all 0.2s ease-in;
+                        color: $gray_color;
+                        cursor: text;
+                    }
+                    input{
+                        border: 1px solid $gray_color;
+                        border-radius: 5px;
+                        background: none;
+                        color: $text_color;
+                        font-size: 17px;
+                        outline: none;
+                        width: 100%;
+                        padding: 1.25rem;
+                        padding-left:4px;
+                        padding-right: 0%;
+                        
+                        &:focus{
+                            border: 2px solid $primary_color;
+                        }
+                        &:focus ~ label{
+                            transform: translateY(-12px);
+                            font-size: 17px;
+                            color: $primary_color;
+                        }
+                        &:valid ~ label{
+                            transform: translateY(-12px);
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }   
+            .submit_form{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                button{
+                    background: rgba(29, 161, 242,0.2);
+                    color: $text_color;
+                    border-radius: 20px;
+                    border: none;
+                    outline: none;
+                    text-align: center;
+                    margin: 12px;
+                    margin-bottom: 1.5rem;
+                    padding: 0 32px;
+                    width: 100%;
+                    height: 46px;
+                    font-size: 18px;
+                    font-weight: bold;
+                    user-select: none;
+                    
+                    &:enabled{
+                        background-color: $primary_color;
+                        color: rgb(217, 217, 217);
+                        
+                    }
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+        
+            }
+        }
+        .nav_link{ 
+            margin: 0 16px;
+            a{
+                color: $primary_color;
+                text-decoration: none;
+                &:hover{
+                    cursor: pointer;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+    
+}
