@@ -28,14 +28,7 @@ import { ListsComponent } from './components/lists/lists.component';
 import { ComposeTweetComponent } from './components/compose-tweet/compose-tweet.component';
 
 
-const firebaseConfig = {
-  apiKey: "AIzaSyD51PCN-SVgRb9wcBX700P1eUj4XAn_8Ug",
-  authDomain: "twitter-clone-1031d.firebaseapp.com",
-  projectId: "twitter-clone-1031d",
-  storageBucket: "twitter-clone-1031d.appspot.com",
-  messagingSenderId: "642920597221",
-  appId: "1:642920597221:web:a91c6859ba704ffd22b60c"
-};
+
 @NgModule({
   declarations: [
     AppComponent,
