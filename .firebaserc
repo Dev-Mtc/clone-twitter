@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "twitter-clone-1031d": {
+      "hosting": {
+        "twitter-clone-app": [
+          "twitter-clone-1031d"
+        ]
+      }
+    }
+  }
+}
