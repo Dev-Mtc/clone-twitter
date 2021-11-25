@@ -1,3 +1,15 @@
+ADD TO src/app/app.module.ts with your firebase api config:
+-------------------------------------------
+const firebaseConfig = {
+  apiKey: "APIKEY",
+  authDomain: "AUTHDOMAIN",
+  projectId: "PROJID",
+  storageBucket: "STORAGE",
+  messagingSenderId: "MSGSENDERID",
+  appId: "APPID"
+};
+-------------------------------------------
+
 # TwitterCloneApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.8.
