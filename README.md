@@ -7,17 +7,27 @@ Test User :
 User : Test@test.com
 Password : 123456
 
-
-ADD TO src/app/app.module.ts with your firebase api config:
 -------------------------------------------
+
+ADD your firebaseconfig TO src/app/app.module.ts with your firebase api config:
+
+
 const firebaseConfig = {
+
   apiKey: "APIKEY",
+  
   authDomain: "AUTHDOMAIN",
+  
   projectId: "PROJID",
+  
   storageBucket: "STORAGE",
+  
   messagingSenderId: "MSGSENDERID",
+  
   appId: "APPID"
+  
 };
+
 -------------------------------------------
 
 # TwitterCloneApp
