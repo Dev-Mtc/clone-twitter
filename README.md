@@ -2,7 +2,10 @@ Link for acces to project published :
 
 https://twitter-clone-1031d.web.app/home
 
+Test User : 
 
+User : Test@test.com
+Password : 123456
 
 
 ADD TO src/app/app.module.ts with your firebase api config:
